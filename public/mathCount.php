@@ -5,15 +5,16 @@ if ($argc == 1){
     exit;
 }
 
-$sum = null;
-$arithmeticAverage = null;
-
+$sum = 0;
+$arithmeticAverage = 0;
+//$sum = array_sum($argv);
 for ($i = 1; $i < $argc; $i++){
-    if (!is_numeric($argv[$i])) {
+    if (is_numeric($argv[$i])) {
+        $sum = $sum + $argv[$i];
+    }else {
         echo 'Error: Введено невірні дані!' . PHP_EOL;
         exit;
     }
-    $sum += $argv[$i];
 }
 
 $arithmeticAverage = $sum / ($argc - 1);
