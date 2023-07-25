@@ -29,17 +29,20 @@ function getString ($value)
     if (is_string($value)){
         return  '\'' . $value . '\'';
     }
+    if (is_array($value)){
+        return  'Array';
+    }
     return  $value;
 }
 
 comparisonOfTypes(10, '10');
+comparisonOfTypes(3.14, '3.14');
 comparisonOfTypes(true, 1);
 comparisonOfTypes(false, 0);
 comparisonOfTypes(true, '1');
 comparisonOfTypes(false, '0');
 comparisonOfTypes(null, 0);
-comparisonOfTypes(null, '0');
+comparisonOfTypes(null, '');
 comparisonOfTypes(null, null);
-comparisonOfTypes(null, 'null');
-comparisonOfTypes(3.14, '3.14');
-comparisonOfTypes(null, '3.14');
+comparisonOfTypes(null, []);
+comparisonOfTypes([], false);

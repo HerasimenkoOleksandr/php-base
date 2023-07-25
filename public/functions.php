@@ -1,37 +1,36 @@
 <?php
 
-//function getCircleArea (int|float $radiusCircle): void
-//{
-//    echo 'Площа кола: ' . pi() * pow($radiusCircle, 2) . PHP_EOL;
-//}
-//
-//getCircleArea(readline('Введіть радіус кола для обчислення його площі: '));
-//
-//function exponentiation (int|float $number, int|float $exponent ): float|int
-//{
-//    return pow($number, $exponent);
-//}
-//
-//echo exponentiation(
-//    readline('Введіть число яке хочете піднести до ступеню: '),
-//    readline('До якої ступені хочете піднести: ')
-//    ) . PHP_EOL;
+function getCircleArea (int|float $radiusCircle): void
+{
+    echo 'Площа кола: ' . pi() * pow($radiusCircle, 2) . PHP_EOL;
+}
 
-$numberOne = 10;
+getCircleArea(readline('Введіть радіус кола для обчислення його площі: '));
+
+function exponentiation (int|float $number, int|float $exponent ): float|int
+{
+    return pow($number, $exponent);
+}
+
+$numbers = readline('Введіть число яке хочете піднести до ступеню: ');
+$exponent = readline('До якої ступені хочете піднести?: ');
+
+echo 'Результат: ' . exponentiation($numbers, $exponent) . PHP_EOL;
+
+$number = readline( 'Введить число: ');
+
+function returnsNewNumber ($num): int|float
+{
+    return $num += 1;
+}
 
 function changeNumber (&$num): int|float
 {
     return $num += 1;
 }
 
-$numberTwo = 10;
+echo 'Ваше число: ' . $number . PHP_EOL;
+echo 'Змінене число: ' . returnsNewNumber($number) . PHP_EOL;
 
-function returnsNewNumber ($num): int|float
-{
-    return $num += 2;
-}
-
-echo changeNumber($numberOne) . PHP_EOL;
-echo $numberOne . PHP_EOL;
-echo returnsNewNumber($numberTwo) . PHP_EOL;
-echo $numberTwo . PHP_EOL;
+echo changeNumber($number) . PHP_EOL;
+echo $number . PHP_EOL;
