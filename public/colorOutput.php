@@ -12,7 +12,7 @@ $arrayColor = [
 $valueColor = readline('Введіть номер кольору: ');
 
 if (!is_numeric($valueColor)){
-    echo 'Error: Введіть чісло!' . PHP_EOL;
+    echo 'Error: Введіть число!' . PHP_EOL;
     exit;
 }
 
@@ -21,14 +21,3 @@ if (array_key_exists($valueColor, $arrayColor)){
 }else{
     echo 'white' . PHP_EOL;
 }
-
-//foreach ($arrayColor as $key => $value){
-//    if ($valueColor[1] > 6 || $valueColor[1] < 1){
-//        echo 'white' . PHP_EOL;
-//        exit;
-//    }
-//    if ($key == $valueColor[1]) {
-//        echo $value . PHP_EOL;
-//        exit;
-//    }
-//}

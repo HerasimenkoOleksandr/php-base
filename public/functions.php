@@ -1,17 +1,37 @@
 <?php
 
-function getCircleArea (int|float $radiusCircle): void
+//function getCircleArea (int|float $radiusCircle): void
+//{
+//    echo 'Площа кола: ' . pi() * pow($radiusCircle, 2) . PHP_EOL;
+//}
+//
+//getCircleArea(readline('Введіть радіус кола для обчислення його площі: '));
+//
+//function exponentiation (int|float $number, int|float $exponent ): float|int
+//{
+//    return pow($number, $exponent);
+//}
+//
+//echo exponentiation(
+//    readline('Введіть число яке хочете піднести до ступеню: '),
+//    readline('До якої ступені хочете піднести: ')
+//    ) . PHP_EOL;
+
+$numberOne = 10;
+
+function changeNumber (&$num): int|float
 {
-    echo 'Площа кола: ' . pi() * pow($radiusCircle, 2) . PHP_EOL;
+    return $num += 1;
 }
 
-getCircleArea(10);
-getCircleArea(78);
+$numberTwo = 10;
 
-
-function exponentiation (int|float $number, int|float $expression): float|int
+function returnsNewNumber ($num): int|float
 {
-    return pow($number, $expression);
+    return $num += 2;
 }
 
-echo exponentiation(10.1, 2.2) . PHP_EOL;
+echo changeNumber($numberOne) . PHP_EOL;
+echo $numberOne . PHP_EOL;
+echo returnsNewNumber($numberTwo) . PHP_EOL;
+echo $numberTwo . PHP_EOL;

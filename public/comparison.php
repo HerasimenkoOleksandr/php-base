@@ -2,19 +2,19 @@
 
 function comparisonOfTypes ($firstValue, $secondValue): void
 {
-    $getFirstValueString = getString($firstValue);
-    $getSecondValueString = getString($secondValue);
+    $firstValueString = getString($firstValue);
+    $secondValueString = getString($secondValue);
 
     if ($firstValue == $secondValue){
-        echo 'В несуворому порівнянні приведені данні ' . $getFirstValueString . ' та '.$getSecondValueString . ' рівні' . PHP_EOL;
+        echo 'В несуворому порівнянні приведені данні ' . $firstValueString . ' та '. $secondValueString . ' рівні' . PHP_EOL;
     }else {
-        echo 'В несуворому порівнянні приведені данні ' . $getFirstValueString . ' та '.$getSecondValueString . ' не рівні' . PHP_EOL;
+        echo 'В несуворому порівнянні приведені данні ' . $firstValueString . ' та '. $secondValueString . ' не рівні' . PHP_EOL;
     }
 
     if ($firstValue === $secondValue){
-        echo 'В суворому порівнянні приведені данні ' . $getFirstValueString . ' та '.$getSecondValueString . ' рівні' . PHP_EOL;
+        echo 'В суворому порівнянні приведені данні ' . $firstValueString . ' та '. $secondValueString . ' рівні' . PHP_EOL;
     }else {
-        echo 'В суворому порівнянні приведені данні ' . $getFirstValueString . ' та '.$getSecondValueString . ' не рівні' . PHP_EOL;
+        echo 'В суворому порівнянні приведені данні ' . $firstValueString . ' та '. $secondValueString . ' не рівні' . PHP_EOL;
     }
     echo '_____________________________________________________________________________________' . PHP_EOL;
 }
