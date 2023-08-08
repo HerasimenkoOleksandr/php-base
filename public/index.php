@@ -1,6 +1,21 @@
 <?php
 
 
+
+//function calc (int $a, int $b, ?Closure $callback = null){
+//    if (is_callable($callback)){
+//        $result = $callback($a,$b);
+//    }else{
+//        $result = $a + $b;
+//    }
+//    return $result;
+//}
+//echo calc(2,4,) . PHP_EOL;
+//echo calc(2,4, function ($x, $y)
+//{
+//    return $x * $y;
+//}) . PHP_EOL;
+
 //$user = [
 //    'name' => 'Саша',
 //    'age' => 18,

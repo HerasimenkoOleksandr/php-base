@@ -8,7 +8,8 @@ class User
 
     public function __construct(protected string $name, protected string $email)
     {
-
+        $name;
+        $this->email;
     }
     function getPhones()
     {
